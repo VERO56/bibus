@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block page_title %}{% endblock %}
+
+{% block page_content %}
+    <div class="col-sm-6 col-xs-12">
+        <div class="info-box clickable" id="btn-lignes">
+            {% set planLignesHref = path('oziolab_bibus_bundle_walk', {'path' : planLignesDir}) %}
+            <a class="info-box-icon" href="{{ planLignesHref }}"><i class="fa fa-map-marker"></i></a>
+            
+            <div class="info-box-content">
+                <a class="info-center-title" href="{{ planLignesHref }}"><span>Plans de lignes</span></a>
+            </div><!-- /.info-box-content -->
+            
+        </div><!-- /.info-box -->
+    </div>
+    <div class="col-sm-6 col-xs-12">
+        <div class="info-box clickable" id="btn-deviations">
+            {% set planDeviationsHref = path('oziolab_bibus_bundle_walk', {'path' : planDeviationsDir}) %}
+            <a class="info-box-icon" href="{{ planDeviationsHref }}"><i class="fa fa-level-up" aria-hidden="true"></i></a>
+            
+            <div class="info-box-content">
+                <a class="info-center-title" href="{{ planDeviationsHref }}"><span>Déviations</span></a>
+            </div><!-- /.info-box-content -->
+            
+        </div><!-- /.info-box -->
+    </div>
+    <div class="col-sm-6 col-xs-12">
+        <div class="info-box clickable" id="btn-navettes">
+            {% set horairesNavettesHref = path('oziolab_bibus_bundle_walk', {'path' : horairesNavettesDir}) %}
+            <a class="info-box-icon" href="{{ horairesNavettesHref }}"><i class="fa fa-clock-o"></i></a>
+           
+            <div class="info-box-content">
+                <a class="info-center-title" href="{{ horairesNavettesHref }}"><span>Cartons et navettes</span></a>
+            </div><!-- /.info-box-content -->
+            
+        </div><!-- /.info-box -->
+    </div>
+    {#<div class="col-sm-6 col-xs-12">
+        <div class="info-box bg-green clickable">
+            <a class="info-box-icon" href="{{ path('oziolab_bibus_contact') }}"><i class="fa fa-envelope-o"></i></a>
+            {% spaceless %}
+            <div class="info-box-content">
+                <a class="info-center-title" href="{{ path('oziolab_bibus_contact') }}"><span>Contact</span></a>
+            </div><!-- /.info-box-content -->
+            {% endspaceless %}
+        </div><!-- /.info-box -->
+    </div>#}
+    <div class="col-sm-6 col-xs-12">
+        <div class="info-box clickable" id="btn-echo">
+            <a class="info-box-icon" href="{{ path('oziolab_bibus_echo_redirect') }}" target="_blank"><i class="fa fa-pencil-square"></i></a>
+            
+            <div class="info-box-content">
+                <a class="info-center-title" href="{{ path('oziolab_bibus_echo_redirect') }}" target="_blank"><span>ECHO<br/><small>Vos préoccupations méritent un retour</small></span></a>
+            </div><!-- /.info-box-content -->
+            
+        </div><!-- /.info-box -->
+    </div>
+    <div class="col-sm-6 col-xs-12">
+        <div class="info-box clickable" id="btn-informations">
+            {% set informationHref = path('oziolab_bibus_bundle_walk', {'path' : informationDir}) %}
+            <a class="info-box-icon" href="{{ informationHref }}"><i class="fa fa-list-alt"></i></a>
+           
+            <div class="info-box-content">
+{#                <a class="info-center-title" href="{{ informationHref }}"><span>Actus</span></a>#}
+                <a class="info-center-title" href="https://monkiosque.ratpdev.com/bibus/_login/"><span>Bibus Connect</span></a>
+            </div><!-- /.info-box-content -->
+            
+        </div><!-- /.info-box -->
+    </div>
+    <div class="col-sm-6 col-xs-12">
+        <div class="info-box clickable" id="btn-aide">
+{#            <a class="info-box-icon" href="{{ path('oziolab_bibus_help') }}"><i class="fa fa-question-circle"></i></a>#}
+            {% set informationHref = path('oziolab_bibus_bundle_walk', {'path' : informationDir}) %}
+            <a class="info-box-icon" href="{{ informationHref }}"><i class="fa fa-list-alt"></i></a>
+{#            <a class="info-box-icon" href="https://docs.google.com/spreadsheets/d/1MXn2cCLe3r7XgbYKhA3D6ROZCRnjKxjAIVw0kmvHNY8/edit#gid=1423524341"><i class="fa fa-calendar"></i></a>#}
+            
+            <div class="info-box-content">
+{#                <a class="info-center-title" href="{{ path('oziolab_bibus_help') }}"><span>Aide</span></a>#}
+ {#               <a class="info-center-title" href="https://docs.google.com/spreadsheets/d/1MXn2cCLe3r7XgbYKhA3D6ROZCRnjKxjAIVw0kmvHNY8/edit#gid=1423524341"><span>Planning évènementiel</span></a>#}
+                {% set informationHref = path('oziolab_bibus_bundle_walk', {'path' : informationDir}) %}
+                <a class="info-center-title" href="{{ informationHref }}"><span>Bibus ‘Com</span></a>
+            </div><!-- /.info-box-content -->
+            
+        </div><!-- /.info-box -->
+    </div>
+{% endblock %}

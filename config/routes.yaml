@@ -1,3 +1,19 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+home:
+    path:     /
+    controller: App\Controller\DefaultController::indexAction
+
+oziolab_bibus_bundle_walk:
+    path:     /documents/{path}
+    controller: App\Controller\DefaultController::walkDirAction
+    requirements:
+        path: "^.+"
+
+oziolab_bibus_bundle_download:
+    path:     /download/{file}
+    controller: App\Controller\DefaultController::downloadFileAction
+    requirements:
+        file: "^.+"
+
+oziolab_bibus_echo_redirect:
+    path:     /redirect-echo
+    controller: App\Controller\ConfigController::redirectEchoAction
